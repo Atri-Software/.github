@@ -1,34 +1,52 @@
 # Atri Software
 
-**Atri Software** is the independent development space behind [Atri OS](https://github.com/Atri-Software/atri-os) — a custom, minimal, and transparent operating system built from the ground up.
-
-This organization hosts all components of the Atri OS ecosystem:
-- Low-level system initialization
-- A custom Wayland UI and shell
-- Terminal-based installer
-- Lightweight package manager
-- Documentation, design assets, and more
+**Atri Software** is the independent development space behind **Atri OS** — a new operating system built entirely from scratch, with its own microkernel, filesystem, and distributed computing architecture.
 
 ---
 
-## ⚡ Mission
+## Vision
 
-To create a modern, user-controlled operating system with no unnecessary complexity, no hidden behavior, and full architectural transparency.
+A fast, private, and predictable operating system where multiple devices — old PCs, servers, laptops — combine into a single computing environment with no upper limit on scale.
 
-Atri OS is a hobby-driven, non-commercial project — for now.
-
----
-
-## 📂 Repositories
-
-Most repositories are currently private while early development is underway.
-More will be published over time as the system becomes stable.
-
-See [`atri-os`](https://github.com/Atri-Software/atri-os) for the project's entry point and manifest.
+**Core principles:**
+- Own microkernel written in Rust
+- Distributed system as the key feature
+- Capability-based security
+- Immutable system image
+- Privacy by design
+- Performance first
 
 ---
 
-## 🛠 Status
+## Architecture
 
-Development is in early stages.
-Stay tuned or reach out if you're curious.
+| Layer | Technology |
+|-------|-----------|
+| Language | Rust |
+| Kernel | Custom microkernel (scheduling, memory, IPC, capabilities) |
+| Drivers | Userspace, stable ABI |
+| Filesystem | Custom (built-in snapshots, compression, encryption) |
+| Desktop Shell | Wry + HTML/CSS/JS |
+| Window Manager | Custom, built from scratch |
+| Bootloader | Limine (initial) → custom (later) |
+| Platforms | x86_64, ARM64, RISC-V |
+
+---
+
+## Repositories
+
+Most repositories are currently private while early development is underway. More will be published as the system takes shape.
+
+See [`atri-os`](https://github.com/Atri-Software/atri-os) for the project's entry point and documentation.
+
+---
+
+## Status
+
+Early stage — architecture and vision defined, implementation beginning.
+
+---
+
+## License
+
+Custom source-available license. Free for personal and non-commercial use.
