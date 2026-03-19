@@ -1,59 +1,37 @@
-# Atri Software
+# Atri OS
 
-**Atri Software** is the independent development space behind **Atri OS** — a new operating system built entirely from scratch, with its own microkernel, filesystem, and distributed computing architecture.
-
----
-
-## Vision
-
-A fast, private, and predictable operating system where multiple devices — old PCs, servers, laptops — combine into a single computing environment with no upper limit on scale.
-
-**Core principles:**
-- Own microkernel written in Rust
-- Distributed system as the key feature
-- Capability-based security
-- Immutable system image
-- Privacy by design
-- Performance first
+An operating system built from scratch. Own microkernel, own filesystem, own desktop — and a distributed architecture that turns any number of machines into one.
 
 ---
 
-## Architecture
-
-| Layer | Technology |
-|-------|-----------|
-| Language | Rust |
-| Kernel | Custom microkernel (scheduling, memory, IPC, capabilities) |
-| Drivers | Userspace, stable ABI |
-| Filesystem | Custom (built-in snapshots, compression, encryption) |
-| Desktop Shell | Wry + HTML/CSS/JS |
-| Window Manager | Custom, built from scratch |
-| Bootloader | Limine (initial) → custom (later) |
-| Platforms | x86_64, ARM64, RISC-V |
+**Your computer is yours.** No telemetry. No forced updates. No subscriptions. No ads. Offline account by default. Every byte of data encrypted on disk. Every application sandboxed. You decide what runs, what connects, and what stays private.
 
 ---
 
-## Repositories
+### Distributed by Design
 
-Most repositories are currently private while early development is underway. More will be published as the system takes shape.
+Connect your laptop, desktop, and server into a single system. CPU, GPU, RAM, and storage are shared transparently across the network. A program starts on one machine and scales across all of them — or migrates to the one with the right hardware. Add a device to grow. Remove it and the system adapts.
 
-See [`atri-os`](https://github.com/Atri-Software/atri-os) for the project's entry point and documentation.
+### Security Without Compromise
+
+Every process runs in a mandatory sandbox. There are no global namespaces, no root user, no ambient authority. Access to any resource — a file, a device, a network socket — requires an explicit capability. Capabilities are granted, attenuated, and delegated, but never forged.
+
+Drivers run in userspace with stable ABI. A crashed driver restarts without taking the system down.
+
+### Runs Anything
+
+Native applications use the Atri SDK. Cross-platform apps ship as WebAssembly — one binary for x86, ARM, and RISC-V. A built-in compatibility layer runs unmodified Linux software. Full virtual machines handle the rest.
+
+### Built to Last
+
+The system image is immutable. Updates are atomic — applied in the background, verified, and rolled back automatically if anything goes wrong. Applications are self-contained packages with no dependency conflicts. The filesystem encrypts everything by default, supports snapshots, and handles compression transparently.
+
+### Three Architectures
+
+x86_64, AArch64, and RISC-V 64 — all first-class. Same kernel, same features, same applications.
 
 ---
 
-## Status
+Source code and documentation: [`atri-os`](https://github.com/Atri-Software/atri-os)
 
-Early stage — architecture and vision defined, implementation beginning.
-
----
-
-## License
-
-**Atri Public License v1.0 (APL-1.0)** — source-available.
-
-- Free for personal, educational, and non-commercial use
-- Commercial use: royalty-based (5% on revenue > $1M/year) or enterprise license
-- Forking and rebranding prohibited
-- Contributions accepted via CLA
-
-See [LICENSE](https://github.com/Atri-Software/atri-os/blob/main/LICENSE) for full terms.
+**Atri Public License v1.0** — source-available. Free for personal and non-commercial use. See [LICENSE](https://github.com/Atri-Software/atri-os/blob/main/LICENSE).
