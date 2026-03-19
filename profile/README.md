@@ -49,4 +49,11 @@ Early stage — architecture and vision defined, implementation beginning.
 
 ## License
 
-Custom source-available license. Free for personal and non-commercial use.
+**Atri Public License v1.0 (APL-1.0)** — source-available.
+
+- Free for personal, educational, and non-commercial use
+- Commercial use: royalty-based (5% on revenue > $1M/year) or enterprise license
+- Forking and rebranding prohibited
+- Contributions accepted via CLA
+
+See [LICENSE](https://github.com/Atri-Software/atri-os/blob/main/LICENSE) for full terms.
